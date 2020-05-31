@@ -1,0 +1,16 @@
+<h1><%= post.person %></h1>
+
+<img src="<%= post.imageUrl %>" alt="#">
+
+
+<h3>Comments</h3>
+<form action="/reddit/<%= post.id %>/comment/add" method="post">
+    <h4>Add a comment</h4>
+    <input type="text" name="commentToAdd">
+    <button type="submit">Submit</button>
+</form>
+
+<!-- show comments linked to the post -->
+<% post.commentList.forEach(function(comment){ %>
+    <p> <%= comment.description %> </p>
+<%});%>

@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+
+<h1>Welcome to Reddit <%= username %></h1>
+
+<% for(var i=postArray.length-1 ;i >=0 ;i--){ %>
+    <h3><%= postArray[i].person %></h3>
+    <a href="/reddit/<%= postArray[i].id %>"><img src="<%= postArray[i].imageUrl %>" alt="#"></a>
+<%}%>
+
+<%- include("partials/footer") %>
