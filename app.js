@@ -34,7 +34,7 @@ function createUser(newUser) {
 }
 
 
-//function to return the post array from the DB
+//function to return the posts array from the DB
 function getPosts(res) {
     post.find({}, function (error, posts) {
         if (!error) {
